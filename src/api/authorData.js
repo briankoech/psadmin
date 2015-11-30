@@ -13,6 +13,14 @@
       id: 'dan-wahlin',
       firstName: 'Dan',
       lastName: 'Wahlin'
+    }, {
+      id: 'brian-koech',
+      firstName: 'Brian',
+      lastName: 'Koech'
+    }, {
+      id: 'jonah-kiprop',
+      firstName: 'Jonah',
+      lastName: 'Kiprop'
     }]
   };
 })();
