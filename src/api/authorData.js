@@ -1,26 +1,20 @@
-(function() {
-	'use strict';
-  module.exports = {
-    authors: [{
-      id: 'cory-house',
-      firstName: 'Cory',
-      lastName: 'House'
-    }, {
-      id: 'scott-allen',
-      firstName: 'Scott',
-      lastName: 'Allen'
-    }, {
-      id: 'dan-wahlin',
-      firstName: 'Dan',
-      lastName: 'Wahlin'
-    }, {
-      id: 'brian-koech',
-      firstName: 'Brian',
-      lastName: 'Koech'
-    }, {
-      id: 'jonah-kiprop',
-      firstName: 'Jonah',
-      lastName: 'Kiprop'
-    }]
-  };
-})();
+module.exports = {
+	authors: 
+	[
+		{
+			id: 'cory-house', 
+			firstName: 'Cory', 
+			lastName: 'House'
+		},	
+		{
+			id: 'scott-allen', 
+			firstName: 'Scott', 
+			lastName: 'Allen'
+		},	
+		{
+			id: 'dan-wahlin', 
+			firstName: 'Dan', 
+			lastName: 'Wahlin'
+		}
+	]
+};

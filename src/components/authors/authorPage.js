@@ -1,34 +1,33 @@
-(function() {
-  'use strict';
+"use strict";
 
-  var React = require('react');
-  var AuthorApi = require('../../api/authorApi');
-  var AuthorList = require('./authorList');
+var React = require('react');
+var Router = require('react-router');
+var Link = Router.Link;
+var AuthorApi = require('../../api/authorApi');
+var AuthorList = require('./authorList');
 
-  var Authors = React.createClass({
-  	getInitialState: function() {
-  		return {
-  			authors: []
-  		};
-  	},
+var AuthorPage = React.createClass({
+	getInitialState: function() {
+		return {
+			authors: []
+		};
+	},
 
-  	componentDidMount: function() {
-  		// check if component is mounteed first
-  		if (this.isMounted()) {
-				this.setState({ authors: AuthorApi.getAllAuthors() });
-  		}
-  	},
+	componentDidMount: function() {
+		if (this.isMounted()) {
+			this.setState({ authors: AuthorApi.getAllAuthors() });
+		}
+	},
 
-    render: function() {
-			
-      return ( 
-      	<div>
-        	<h1> Authors </h1> 
-        	<AuthorList authors={this.state.authors} />
-        </div>
-      );
-    }
-  });
+	render: function() {
+		return (
+			<div>
+				<h1>Authors</h1>
+				<Link to="addAuthor" className="btn btn-default">Add author</Link>
+				<AuthorList authors={this.state.authors} />
+			</div>
+		);
+	}
+});
 
-  module.exports = Authors;
-})();
+module.exports = AuthorPage;
